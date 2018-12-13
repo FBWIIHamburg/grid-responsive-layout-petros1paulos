@@ -7,17 +7,13 @@ body {
   }
   
   header, footer {
-    padding-right: 10%;
-    padding-left: 10%;
-    padding-top:10px;
-    padding-bottom:10px;
+    display: grid;
+
+    grid-template-columns: auto auto auto auto;
     color: white;
     background-color: black;
   }
-  header{
-    display: flex;
-    justify-content: space-between;
-  }
+  
   
   section {
     margin: 5px;
@@ -26,11 +22,15 @@ body {
     padding-top:10px;
     padding-bottom:10px;
     background-color: lightgrey;
-    display: flex;
-    flex-wrap: wrap;
-    
+    display: grid;
+grid-template-columns: auto auto auto; 
+grid-column-gap: 10px;  
+grid-row-gap: 10px; 
   }
-  
+  .container>h2{
+    grid-column-start: 1;
+    grid-column-end: 4;}
+
   section>h2{
     flex: 100%;
   }
@@ -86,5 +86,10 @@ body {
       padding-right:0;
       margin: 0;
     }
+  }
+  .conmtainer{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
   }
   
